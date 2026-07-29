@@ -29,3 +29,9 @@ for portfolio-NDA etiquette; for true security use your host's protection
 3. Add real LinkedIn / Instagram / YouTube URLs in contact.html.
 4. Add your resume PDF at assets/chetan-hegde-cv.pdf (the CV page Download button points there).
 5. Fill the [bracketed] placeholders on the CV page and case study meta sections.
+
+## SEO
+Full SEO is built in (meta, OG, Twitter cards, JSON-LD, sitemap.xml, robots.txt).
+IMPORTANT: replace the placeholder domain `https://chetandesign.vercel.app` with your real
+domain across all .html files, sitemap.xml, and robots.txt before launch. See
+SEO-CHECKLIST.md for the full list and Search Console steps.
