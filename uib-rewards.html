@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Rewards app — Lead Product Designer case study by Chetan Hegde.">
+<title>Rewards app — Lead Product Designer Case Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f3f3ef;--paper:#fff;--ink:#111;--muted:#686864;--line:#d9d9d2;--soft:#e9e9e3;--max:1120px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;overflow-y:scroll;scrollbar-gutter:stable}body{margin:0;padding-top:86px;background:var(--bg);color:var(--ink);font-family:"DM Sans",Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}.wrap{width:min(var(--max),calc(100% - 48px));margin:0 auto}
+.site-header{position:fixed;top:0;left:50%;transform:translateX(-50%);z-index:1000;height:86px;display:flex;align-items:center;justify-content:space-between;border-bottom:0;background:var(--bg)}.logo{font-size:36px;font-weight:700;letter-spacing:-3px}.header-right{display:flex;align-items:center;gap:22px;font-size:14px}.back{color:var(--muted)}.back:hover{color:var(--ink)}.case-nav{display:flex;gap:20px;color:var(--muted)}.case-nav a.active{color:var(--ink);font-weight:650}.case-backbar{padding:14px 0 0}.case-backbar .back{font-size:13px;color:var(--muted)}.case-backbar .back:hover{color:var(--ink)}
+.hero{padding:105px 0 82px}.eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.14em;color:var(--muted);margin-bottom:22px}.hero h1{font-size:clamp(52px,8vw,100px);line-height:.92;letter-spacing:-.075em;font-weight:650;margin:0 0 30px;max-width:1000px}.hero-lead{font-size:clamp(23px,2.5vw,32px);line-height:1.25;letter-spacing:-.03em;max-width:900px;margin:0 0 20px}.byline{font-size:13px;color:var(--muted);margin:0 0 28px}.meta{margin-top:52px;border-top:1px solid var(--line);border-bottom:0;display:grid;grid-template-columns:repeat(4,1fr)}.meta div{padding:21px 18px;border-right:1px solid var(--line)}.meta div:last-child{border-right:0}.meta span{display:block;color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:.1em;margin-bottom:7px}.meta b{font-size:14px;font-weight:600}
+section{padding:100px 0;border-top:1px solid var(--line)}section:first-child{border-top:0}.section-no{font-size:11px;text-transform:uppercase;letter-spacing:.13em;color:var(--muted);margin-bottom:18px}h2{font-size:clamp(40px,5.5vw,68px);line-height:.98;letter-spacing:-.06em;font-weight:620;margin:0 0 30px;max-width:920px}h3{font-size:21px;letter-spacing:-.025em;margin:46px 0 12px}p{font-size:17px;max-width:860px;margin:0 0 18px}.lead{font-size:21px;line-height:1.4;max-width:860px}.muted{color:var(--muted)}.quote{font-size:clamp(29px,4vw,50px);line-height:1.08;letter-spacing:-.05em;margin:45px 0;max-width:930px}
+.image{width:100%;margin:48px 0 10px;border:1px solid var(--line);border-radius:24px;overflow:hidden;background:#e9e9e4}.image img{display:block;width:100%;height:auto;max-height:850px;object-fit:contain}.caption{font-size:12px;color:var(--muted);margin-bottom:38px}.stack{display:grid;gap:12px;margin-top:30px}.card{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:27px}.card h3{margin:0 0 9px;font-size:18px}.card p{font-size:15px;margin:0;color:#555}
+.data-table{margin-top:30px;border-top:1px solid var(--line);background:var(--paper);border-radius:20px;overflow:hidden;border-left:1px solid var(--line);border-right:1px solid var(--line)}.data-row{display:grid;grid-template-columns:1.15fr 1fr 1.55fr;gap:0;border-bottom:0}.data-row>div{padding:18px 20px;border-right:1px solid var(--line);font-size:15px}.data-row>div:last-child{border-right:0}.data-row.head{background:var(--soft);font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}.data-row.head>div{font-size:11px}.data-row strong{font-weight:600}.data-row em{font-style:normal;color:#666}
+.legend{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:30px}.legend .card{min-height:150px}.marker{display:inline-block;font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:10px}.star{font-weight:700}.directional{font-style:italic}
+.list{margin:28px 0 0;padding:0;list-style:none}.list li{padding:19px 0;border-top:1px solid var(--line);font-size:16px}.list li b{display:block;margin-bottom:5px}.numbered{counter-reset:item;list-style:none;padding:0;margin:28px 0}.numbered li{counter-increment:item;display:grid;grid-template-columns:38px 1fr;gap:15px;padding:18px 0;border-top:1px solid var(--line);font-size:16px}.numbered li:before{content:counter(item);width:30px;height:30px;border-radius:50%;background:#111;color:#fff;display:grid;place-items:center;font-size:11px}
+.flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:30px 0}.flow span{background:#111;color:#fff;border-radius:999px;padding:10px 14px;font-size:12px}.flow i{font-style:normal;color:#999}.principle{background:#111;color:#fff;border-radius:26px;padding:45px;margin-top:36px}.principle p{color:#cfcfcb}.principle .quote{margin:0;color:#fff}.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:32px}.metric{background:#111;color:#fff;border-radius:18px;padding:26px;min-height:170px}.metric .num{font-size:32px;letter-spacing:-.05em;font-weight:650}.metric .label{font-size:14px;color:#d2d2d2;margin-top:8px}.metric .sub{font-size:11px;color:#999;margin-top:12px}.impact-section h2{max-width:760px}.note{background:#fff7df;border:1px solid #eadfbf;border-radius:16px;padding:17px 19px;font-size:13px;color:#5d5131;margin:25px 0}.site-footer{padding:80px 0 100px;border-top:1px solid var(--line);text-align:center}.site-footer h2{margin:0 auto 20px}.site-footer p{margin:0 auto;color:var(--muted)}.footer-links{margin-top:28px;display:flex;justify-content:center;gap:24px;color:var(--muted);font-size:14px}
+@media(max-width:760px){body{padding-top:68px}.wrap{width:min(1160px,calc(100% - 36px))}.case-nav{display:flex;gap:14px;flex-wrap:wrap;justify-content:flex-end}.hero{padding:75px 0 62px}.meta{grid-template-columns:1fr 1fr}.meta div:nth-child(2){border-right:0}.meta div:nth-child(3),.meta div:nth-child(4){border-top:1px solid var(--line)}.data-row{grid-template-columns:1fr}.data-row.head{display:none}.data-row>div{border-right:0;border-bottom:0}.data-row>div:last-child{border-bottom:0}.legend,.metrics{grid-template-columns:1fr}.ba{grid-template-columns:1fr}.ba .old{border-right:0;border-bottom:0}}
+@media(max-width:480px){.wrap{width:min(var(--max),calc(100% - 28px))}.hero h1{font-size:clamp(48px,15vw,72px)}section{padding:70px 0}.hero{padding:65px 0 55px}.meta{grid-template-columns:1fr}.meta div{border-right:0!important;border-top:1px solid var(--line)}.meta div:first-child{border-top:0}.hero-lead{font-size:22px}.quote{font-size:34px}}
+
+/* Exact shared portfolio header — matches the home page */
+.header{
+  height:86px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  position:fixed;
+  top:0;
+  left:50%;
+  transform:translateX(-50%);
+  z-index:1000;
+  background:var(--bg);
+  width:min(calc(100% - 72px),1160px);
+  box-sizing:border-box;
+}
+.header .logo{
+  font-size:36px;
+  line-height:1;
+  font-weight:700;
+  letter-spacing:-3px;
+  color:#111214;
+  flex:0 0 auto;
+}
+.header .nav{
+  display:flex;
+  gap:28px;
+  align-items:center;
+  margin-left:auto;
+  font-size:13px;
+  color:#626469;
+}
+.header .nav a{position:relative;color:inherit;text-decoration:none}
+.header .nav a:after{
+  content:"";position:absolute;left:0;right:0;bottom:-7px;height:1px;
+  background:#222;transform:scaleX(0);transform-origin:right;transition:transform .3s ease;
+}
+.header .nav a:hover:after{transform:scaleX(1);transform-origin:left}
+.header .nav .cv-button{
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:8px 13px;border:1px solid #bfc1c5;border-radius:999px;
+  color:#55575c;background:rgba(255,255,255,.3);font-size:11px;
+}
+.header .nav .cv-button:after{display:none}
+.menu-toggle{
+  display:none;width:40px;height:40px;padding:9px;border:1px solid #c5c7ca;
+  border-radius:10px;background:rgba(255,255,255,.35);cursor:pointer;
+  align-items:center;justify-content:center;flex-direction:column;gap:4px;color:#111214;
+}
+.menu-toggle span{display:block;width:18px;height:1.5px;background:currentColor;transition:transform .2s ease,opacity .2s ease}
+.menu-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(5.5px) rotate(45deg)}
+.menu-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+.menu-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-5.5px) rotate(-45deg)}
+@media(max-width:760px){
+  body{padding-top:70px!important}
+  .header{
+    height:70px;width:calc(100% - 36px);left:50%;right:auto;transform:translateX(-50%);
+  }
+  .header .nav{display:none}
+  .menu-toggle{display:flex}
+  .header .nav.menu-open{
+    display:flex;position:absolute;top:70px;left:0;right:0;width:auto;
+    margin:0;flex-direction:column;align-items:stretch;gap:0;padding:10px;
+    background:#f1f2f4;border:1px solid #cfd1d4;border-radius:14px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08)
+  }
+  .header .nav.menu-open a{
+    display:block!important;padding:12px 13px;font-size:13px;border-radius:9px
+  }
+  .header .nav.menu-open a:after{display:none}
+}
+</style>
+
+</head>
+<body>
+<header class="header wrap">
+  <a class="logo" href="index.html">CH.</a>
+  <nav class="nav">
+    <a href="case-studies.html">Case Studies</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a class="cv-button" href="Chetan-Hegde-Lead-Product-Designer.pdf" target="_blank" rel="noopener noreferrer">My CV</a>
+  </nav>
+  <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</header><div class="case-backbar wrap"><a class="back" href="case-studies.html">← Back to Case Studies</a></div>
+<main>
+<section class="hero"><div class="wrap">
+  <div class="eyebrow">Lead Product Designer Case Study</div>
+  <h1>Designing a scalable rewards ecosystem across 10 brands.</h1>
+  <p class="hero-lead">The rewards app is a multi-brand membership rewards platform built for the UK market, bringing discounts, gift cards, referrals, prize draws and member benefits into one experience.</p>
+  <p class="byline">Lead Product Designer · ~4 months · Mobile + Responsive Web · Design System</p>
+  <div class="meta"><div><span>Role</span><b>Lead Product Designer</b></div><div><span>Timeline</span><b>~4 months</b></div><div><span>Platforms</span><b>Mobile + Responsive Web</b></div><div><span>Focus</span><b>Product Strategy · Marketplace · Design System</b></div></div>
+  <div class="image"><img src="rewards-app.png" alt="Rewards app product interface"></div>
+  <div class="caption">Rewards app product visual — selected project interface.</div>
+</div></section>
+
+<section id="overview"><div class="wrap">
+  <div class="section-no">Overview</div>
+  <h2>One product foundation. Ten distinct brands.</h2>
+  <p>The rewards app is a multi-brand membership rewards platform built for the UK market, bringing discounts, gift cards, referrals, prize draws and member benefits into one experience.</p>
+  <p>The challenge wasn't simply to redesign a rewards app.</p>
+  <p>It was to create <strong>one product foundation flexible enough to support 10 distinct brands</strong>, while keeping the experience coherent, scalable and operationally efficient.</p>
+  <p>I led the product design direction from <strong>pre-sales and product strategy through mobile, responsive web, design system and CMS thinking</strong>.</p>
+  <div class="principle"><p>Product scale</p><div class="quote">10 brands · 2 platforms · 1 product foundation</div></div>
+</div></section>
+
+<section id="challenge"><div class="wrap">
+  <div class="section-no">The Challenge</div>
+  <h2>A scalability problem across three dimensions.</h2>
+  <p>The initial brief looked like a product redesign. Through discovery, I reframed it as a <strong>scalability problem across three dimensions</strong>:</p>
+  <div class="stack">
+    <div class="card"><h3>01 — Member discovery</h3><p>Members often arrive knowing <strong>what brand they want</strong>, rather than understanding the platform's reward categories.</p></div>
+    <div class="card"><h3>02 — Brand identity</h3><p>Each brand needed to feel distinctive and native—not like the same application with a different logo and colour.</p></div>
+    <div class="card"><h3>03 — Product scalability</h3><p>Launching or changing a brand shouldn't require designing and engineering another version of the product.</p></div>
+  </div>
+  <div class="quote">How might we make rewards easier to discover while creating a product foundation that can scale across multiple brands?</div>
+</div></section>
+
+<section id="role"><div class="wrap">
+  <div class="section-no">My Role</div>
+  <h2>Product design direction from strategy to system.</h2>
+  <p>I owned the product design direction across:</p>
+  <ul class="list">
+    <li><b>Product strategy and experience definition</b></li><li><b>Pre-sales concept and prototype</b></li><li><b>Research synthesis and mental-model exploration</b></li><li><b>Information architecture</b></li><li><b>Mobile experience</b></li><li><b>Responsive web experience</b></li><li><b>Design system and token architecture</b></li><li><b>Multi-brand theming strategy</b></li><li><b>CMS/content workflow thinking</b></li><li><b>Design reviews and engineering collaboration</b></li>
+  </ul>
+  <p style="margin-top:28px">The project involved designers, engineers, product stakeholders and client teams.</p>
+</div></section>
+
+<section id="direction"><div class="wrap">
+  <div class="section-no">01 — From requirements to product direction</div>
+  <h2>Turning a requirement list into a product proposition.</h2>
+  <p class="lead">The engagement started during <strong>pre-sales</strong>.</p>
+  <p>Instead of treating the requirement document as a list of screens, I translated it into a product proposition and created a clickable concept that demonstrated how the experience could evolve.</p>
+  <div class="flow"><span>Requirements</span><i>→</i><span>Reframe</span><i>→</i><span>Concept</span><i>→</i><span>Prototype</span><i>→</i><span>Alignment</span></div>
+  <p>The prototype gave stakeholders something tangible to evaluate—not just visual design, but the product structure, core journeys and future scalability.</p>
+  <p>This helped convert the initial opportunity into a product design engagement.</p>
+  <div class="note"><strong>Key outcome:</strong> the engagement expanded beyond the initial mobile scope into responsive web, indicating confidence in the product direction.</div>
+</div></section>
+
+<section id="discovery"><div class="wrap">
+  <div class="section-no">02 — Discovery: designing around the member's mental model</div>
+  <h2>Members don't think in platform categories. They think in brands, rewards and actions.</h2>
+  <p>The client already had research and documented pain points, so I focused on <strong>validating, connecting and extending existing knowledge</strong> rather than restarting research from zero.</p>
+  <p>I brought together:</p>
+  <ul class="list"><li><b>Stakeholder conversations</b></li><li><b>Existing customer research</b></li><li><b>Experience and competitor review</b></li><li><b>Analytics and journey review</b></li><li><b>Mental-model exploration</b></li></ul>
+  <div class="before-after"><div class="ba"><div class="old"><b>Existing structure</b><p>Platform → Category → Reward → Action</p></div><div><b>Member mental model</b><p>Brand → Reward → Action</p></div></div></div>
+  <h3>Strategic shift</h3>
+  <p>Instead of making members learn the rewards ecosystem first, the experience starts with what they already know:</p>
+  <div class="principle"><div class="quote">“Where are you shopping?”</div></div>
+  <p>Brand search, recently purchased brands and favourites became more prominent, while categories remained an exploration layer.</p>
+  <p><strong>Meet the member's existing intent first. Introduce the ecosystem second.</strong></p>
+</div></section>
+
+<section id="brands"><div class="wrap">
+  <div class="section-no">03 — One product, 10 brands</div>
+  <h2>Separate experience architecture from brand expression.</h2>
+  <p class="lead">We didn't want to build 10 different applications. We designed <strong>one shared product foundation with controlled variation</strong>.</p>
+  <div class="data-table">
+    <div class="data-row head"><div>Shared foundation</div><div>Brand-specific layer</div><div>Architecture</div></div>
+    <div class="data-row"><div>Information architecture<br>Navigation<br>Core journeys<br>Interaction patterns<br>Components<br>Product states<br>Business rules</div><div>Logo<br>Colour<br>Typography<br>Imagery<br>Content<br>Promotional emphasis<br>Selected feature variations</div><div><strong>Design Tokens → Components → Patterns → Journeys → Brand Themes</strong></div></div>
+  </div>
+  <h3>Why this mattered</h3>
+  <p>It created a balance between two competing needs:</p>
+  <div class="flow"><span>Consistency for the product</span><i>+</i><span>Distinctiveness for each brand</span></div>
+  <p>That was the core scalability problem—and the design system became part of the product strategy, not simply a UI library.</p>
+</div></section>
+
+<section id="behaviours"><div class="wrap">
+  <div class="section-no">04 — Designing around six member behaviours</div>
+  <h2>Organise the experience around what members come to do.</h2>
+  <p>Rather than organising the mobile experience around features, I organised it around <strong>what members come to do</strong>.</p>
+  <div class="data-table">
+    <div class="data-row head"><div>Behaviour</div><div>Experience</div><div>Role in the journey</div></div>
+    <div class="data-row"><div><strong>Discover</strong></div><div>Home / Shop</div><div>Find brands and rewards.</div></div>
+    <div class="data-row"><div><strong>Save</strong></div><div>Rewards</div><div>Understand value and redemption.</div></div>
+    <div class="data-row"><div><strong>Manage</strong></div><div>Wallet</div><div>Track coins, savings and benefits.</div></div>
+    <div class="data-row"><div><strong>Buy</strong></div><div>Gift Cards</div><div>Browse → Choose → Confirm → Purchase.</div></div>
+    <div class="data-row"><div><strong>Share</strong></div><div>Referrals</div><div>Invite → Share → Track.</div></div>
+    <div class="data-row"><div><strong>Control</strong></div><div>Account</div><div>Manage the member relationship.</div></div>
+  </div>
+  <div class="stack">
+    <div class="card"><h3>Home / Shop</h3><p>Brand-led discovery with recently purchased and favourite brands surfaced early.</p></div>
+    <div class="card"><h3>Rewards</h3><p>The value proposition comes before the action—for example, showing savings and redemption context upfront.</p></div>
+    <div class="card"><h3>Wallet</h3><p>Coins, savings and available benefits are brought into one place.</p></div>
+    <div class="card"><h3>Gift Cards</h3><p>A focused <strong>Browse → Choose → Confirm → Purchase</strong> journey, with Buy &amp; Win mechanics layered into the purchase experience.</p></div>
+    <div class="card"><h3>Referral</h3><p>A focused <strong>Invite → Share → Track</strong> journey.</p></div>
+  </div>
+  <p style="margin-top:28px">This made the product easier to understand while giving every major member behaviour a clear home.</p>
+</div></section>
+
+<section id="retention"><div class="wrap">
+  <div class="section-no">05 — Designing for retention, not just transactions</div>
+  <h2>Make member value visible throughout the experience.</h2>
+  <p>One small but strategic decision was bringing <strong>Coins</strong> and <strong>Saved £</strong> into the persistent mobile header.</p>
+  <p>The intention wasn't visual decoration.</p>
+  <p>It created a continuous reminder of the value members were accumulating through the product.</p>
+  <div class="flow"><span>Value visibility</span><i>→</i><span>Repeat engagement</span><i>→</i><span>Potential retention</span></div>
+  <p>This also gave us a measurable hypothesis to validate through returning-member behaviour and reward redemption.</p>
+</div></section>
+
+<section id="platforms"><div class="wrap">
+  <div class="section-no">06 — Mobile first, web as one product</div>
+  <h2>Two surfaces of one product—not two products.</h2>
+  <p>Mobile became the first expression of the product model. Once the core experience and design system were established, the engagement expanded into <strong>responsive web</strong>.</p>
+  <p>The objective wasn't to create a desktop version of the app.</p>
+  <div class="principle"><div class="quote">Two surfaces of one product—not two products.</div></div>
+  <p>The product logic, IA, core journeys, design language, components and tokens remained shared, while the web experience adapted for:</p>
+  <ul class="list"><li><b>Responsive layouts</b></li><li><b>Higher information density</b></li><li><b>Desktop interaction patterns</b></li><li><b>Different content contexts</b></li></ul>
+  <p>The web experience inherited the product strategy instead of starting from scratch.</p>
+</div></section>
+
+<section id="operations"><div class="wrap">
+  <div class="section-no">07 — Designing for the teams behind the product</div>
+  <h2>A scalable consumer experience also needs scalable operations.</h2>
+  <p>I contributed to the thinking around the <strong>CMS and content workflow</strong>, enabling teams to manage:</p>
+  <ul class="list"><li><b>Rewards</b></li><li><b>Brand content</b></li><li><b>Promotions</b></li><li><b>Visual assets</b></li><li><b>Product information</b></li></ul>
+  <div class="principle"><div class="quote">The product shouldn't need a designer every time the business changes content.</div></div>
+  <p>This shifted part of the product from being <strong>design-dependent</strong> to <strong>configuration-driven</strong>.</p>
+</div></section>
+
+<section id="decisions"><div class="wrap">
+  <div class="section-no">Key Product Decisions</div>
+  <h2>Optimising for scale, speed and maintainability.</h2>
+  <div class="data-table">
+    <div class="data-row head"><div>Decision</div><div>Chose</div><div>Over</div></div>
+    <div class="data-row"><div><strong>Brand flexibility</strong></div><div>Token-based theming + configuration</div><div>Fully custom interfaces for every brand.</div></div>
+    <div class="data-row"><div><strong>Discovery</strong></div><div>Brand-led discovery</div><div>Forcing members through category-first navigation.</div></div>
+    <div class="data-row"><div><strong>Delivery</strong></div><div>Core mobile journeys first</div><div>Waiting for full feature parity across platforms.</div></div>
+    <div class="data-row"><div><strong>Content</strong></div><div>CMS-driven updates</div><div>Creating designer dependency for operational changes.</div></div>
+  </div>
+  <p style="margin-top:28px">These decisions optimised for <strong>scale, speed and maintainability</strong>, not just visual consistency.</p>
+</div></section>
+
+<section id="impact" class="impact-section"><div class="wrap">
+  <div class="section-no">Impact</div>
+  <h2>The strongest outcomes were structural as well as product-facing.</h2>
+  <div class="metrics">
+    <div class="metric"><div class="num">10</div><div class="label">Brands</div><div class="sub">One shared product foundation</div></div>
+    <div class="metric"><div class="num">2</div><div class="label">Platforms</div><div class="sub">Mobile + responsive web</div></div>
+    <div class="metric"><div class="num">~4 mo</div><div class="label">Timeline</div><div class="sub">Product design engagement</div></div>
+  </div>
+  <div class="stack">
+    <div class="card"><h3>Product scale</h3><p><strong>10 brands</strong> supported by one shared product foundation.</p></div>
+    <div class="card"><h3>Platform scale</h3><p><strong>Mobile + responsive web</strong> designed from one experience architecture.</p></div>
+    <div class="card"><h3>Business expansion</h3><p>The initial mobile engagement expanded into responsive web.</p></div>
+    <div class="card"><h3>Delivery</h3><p>Mobile moved into production, with web progressing toward launch.</p></div>
+  </div>
+  <h3>Efficiency</h3>
+  <p>The design system and theming approach created the foundation to measure:</p>
+  <ul class="list"><li><b>Time required to launch a new brand</b></li><li><b>Component reuse across brands</b></li><li><b>Design effort per brand</b></li><li><b>Content changes completed without design involvement</b></li></ul>
+  <h3>Member outcomes</h3>
+  <div class="stack">
+    <div class="card"><h3>North Star</h3><p><strong>Monthly members who redeem at least one reward</strong></p></div>
+    <div class="card"><h3>Activation</h3><p>Time from app open → first reward viewed</p></div>
+    <div class="card"><h3>Engagement</h3><p>Reward discovery → redemption rate</p></div>
+    <div class="card"><h3>Commercial</h3><p>Gift-card purchase conversion</p></div>
+    <div class="card"><h3>Retention</h3><p>30-day active members / repeat redeemers</p></div>
+    <div class="card"><h3>Growth</h3><p>Referral invites → successful referrals</p></div>
+  </div>
+  <p style="margin-top:28px">The north-star metric connects member value—saving money through rewards—with business value generated through reward usage.</p>
+</div></section>
+
+<section id="reflection"><div class="wrap">
+  <div class="section-no">What I learned</div>
+  <h2>The hardest part wasn't designing 10 branded experiences.</h2>
+  <p class="lead">It was deciding <strong>what should never change—and what should be allowed to change.</strong></p>
+  <p>The breakthrough was separating:</p>
+  <div class="flow"><span>Product experience</span><i>from</i><span>Brand expression</span></div>
+  <p>Once that boundary was established, the design system became a strategic mechanism for scaling the business rather than simply a collection of reusable components.</p>
+  <div class="principle"><div class="quote">The challenge wasn't designing 10 experiences. It was designing one experience flexible enough to become 10 brands.</div></div>
+</div></section>
+<section class="home-connect wrap reveal">
+  <div class="home-connect-inner">
+    <div class="home-connect-heading">
+      <div class="page-eyebrow">Connect</div>
+      <h2>Have a product problem<br>worth solving?</h2>
+      <a class="home-connect-email" href="mailto:chetan.dezign@gmail.com">chetan.dezign@gmail.com</a>
+    </div>
+    <div class="home-connect-actions">
+      <a class="home-connect-link" href="mailto:chetan.dezign@gmail.com">Let’s talk <span>→</span></a>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div>© 2026 Chetan Hegde</div>
+  <div class="site-footer-links">
+    <a href="index.html">Home</a>
+    <a href="case-studies.html">Case Studies</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <div class="site-footer-socials" aria-label="Social links">
+    <a class="footer-social-icon" href="https://www.linkedin.com/in/chetandesign/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 8.2H3.1V20h3.4V8.2ZM4.8 3A2 2 0 1 0 4.8 7a2 2 0 0 0 0-4ZM20.9 13.2c0-3.6-1.9-5.3-4.5-5.3-2.1 0-3 1.2-3.5 2v-1.7H9.5V20h3.4v-6.5c0-1.7.3-3.3 2.4-3.3 2 0 2 1.9 2 3.4V20h3.6v-6.8Z"/></svg>
+    </a>
+    <a class="footer-social-icon" href="#" aria-label="Instagram" title="Instagram">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="4"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.8" r="1"/></svg>
+    </a>
+  </div>
+</footer>
+
+<script>
+(function(){const b=document.querySelector('.menu-toggle');const n=document.querySelector('.nav, .case-nav');if(!b||!n)return;b.addEventListener('click',()=>{const open=b.getAttribute('aria-expanded')==='true';b.setAttribute('aria-expanded',String(!open));b.setAttribute('aria-label',open?'Open menu':'Close menu');n.classList.toggle('menu-open',!open)});n.addEventListener('click',e=>{if(e.target.closest('a')){b.setAttribute('aria-expanded','false');b.setAttribute('aria-label','Open menu');n.classList.remove('menu-open')}})})();
+</script>
+</body>
+</html>

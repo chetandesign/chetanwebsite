@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Edu Fintech — Product Design Case Study by Chetan Hegde.">
+<title>Edu Fintech — Product Design Case Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f3f3ef;--paper:#fff;--ink:#111;--muted:#686864;--line:#d9d9d2;--soft:#e9e9e3;--max:1120px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;overflow-y:scroll;scrollbar-gutter:stable}body{margin:0;padding-top:86px;background:var(--bg);color:var(--ink);font-family:"DM Sans",Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}.wrap{width:min(var(--max),calc(100% - 48px));margin:0 auto}
+.site-header{position:fixed;top:0;left:50%;transform:translateX(-50%);z-index:1000;height:86px;display:flex;align-items:center;justify-content:space-between;border-bottom:0;background:var(--bg)}.logo{font-size:36px;font-weight:700;letter-spacing:-3px}.header-right{display:flex;align-items:center;gap:22px;font-size:14px}.back{color:var(--muted)}.back:hover{color:var(--ink)}.case-nav{display:flex;gap:20px;color:var(--muted)}.case-nav a.active{color:var(--ink);font-weight:650}.case-backbar{padding:14px 0 0}.case-backbar .back{font-size:13px;color:var(--muted)}.case-backbar .back:hover{color:var(--ink)}
+.hero{padding:105px 0 82px}.eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.14em;color:var(--muted);margin-bottom:22px}.hero h1{font-size:clamp(52px,8vw,100px);line-height:.92;letter-spacing:-.075em;font-weight:650;margin:0 0 30px;max-width:1000px}.hero-lead{font-size:clamp(23px,2.5vw,32px);line-height:1.25;letter-spacing:-.03em;max-width:900px;margin:0 0 20px}.byline{font-size:13px;color:var(--muted);margin:0 0 28px}.meta{margin-top:52px;border-top:1px solid var(--line);border-bottom:0;display:grid;grid-template-columns:repeat(4,1fr)}.meta div{padding:21px 18px;border-right:1px solid var(--line)}.meta div:last-child{border-right:0}.meta span{display:block;color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:.1em;margin-bottom:7px}.meta b{font-size:14px;font-weight:600}
+section{padding:100px 0;border-top:1px solid var(--line)}section:first-child{border-top:0}.section-no{font-size:11px;text-transform:uppercase;letter-spacing:.13em;color:var(--muted);margin-bottom:18px}h2{font-size:clamp(40px,5.5vw,68px);line-height:.98;letter-spacing:-.06em;font-weight:620;margin:0 0 30px;max-width:920px}h3{font-size:21px;letter-spacing:-.025em;margin:46px 0 12px}p{font-size:17px;max-width:860px;margin:0 0 18px}.lead{font-size:21px;line-height:1.4;max-width:860px}.muted{color:var(--muted)}.quote{font-size:clamp(29px,4vw,50px);line-height:1.08;letter-spacing:-.05em;margin:45px 0;max-width:930px}
+.image{width:100%;margin:48px 0 10px;border:1px solid var(--line);border-radius:24px;overflow:hidden;background:#e9e9e4}.image img{display:block;width:100%;height:auto;max-height:850px;object-fit:contain}.caption{font-size:12px;color:var(--muted);margin-bottom:38px}.stack{display:grid;gap:12px;margin-top:30px}.card{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:27px}.card h3{margin:0 0 9px;font-size:18px}.card p{font-size:15px;margin:0;color:#555}
+.data-table{margin-top:30px;border-top:1px solid var(--line);background:var(--paper);border-radius:20px;overflow:hidden;border-left:1px solid var(--line);border-right:1px solid var(--line)}.data-row{display:grid;grid-template-columns:1.05fr .95fr 1.5fr;gap:0;border-bottom:0}.data-row>div{padding:18px 20px;border-right:1px solid var(--line);font-size:15px}.data-row>div:last-child{border-right:0}.data-row.head{background:var(--soft);font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}.data-row.head>div{font-size:11px}.data-row strong{font-weight:600}.data-row em{font-style:normal;color:#666}
+.legend{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:30px}.legend .card{min-height:150px}.marker{display:inline-block;font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:10px}.star{font-weight:700}.directional{font-style:italic}.list{margin:28px 0 0;padding:0;list-style:none}.list li{padding:19px 0;border-top:1px solid var(--line);font-size:16px}.list li b{display:block;margin-bottom:5px}.numbered{counter-reset:item;list-style:none;padding:0;margin:28px 0}.numbered li{counter-increment:item;display:grid;grid-template-columns:38px 1fr;gap:15px;padding:18px 0;border-top:1px solid var(--line);font-size:16px}.numbered li:before{content:counter(item);width:30px;height:30px;border-radius:50%;background:#111;color:#fff;display:grid;place-items:center;font-size:11px}
+.flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:30px 0}.flow span{background:#111;color:#fff;border-radius:999px;padding:10px 14px;font-size:12px}.flow i{font-style:normal;color:#999}.principle{background:#111;color:#fff;border-radius:26px;padding:45px;margin-top:36px}.principle p{color:#cfcfcb}.principle .quote{margin:0;color:#fff}.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:32px}.metric{background:#111;color:#fff;border-radius:18px;padding:26px;min-height:170px}.metric .num{font-size:32px;letter-spacing:-.05em;font-weight:650}.metric .label{font-size:14px;color:#d2d2d2;margin-top:8px}.metric .sub{font-size:11px;color:#999;margin-top:12px}.impact-section h2{max-width:760px}.note{background:#fff7df;border:1px solid #eadfbf;border-radius:16px;padding:17px 19px;font-size:13px;color:#5d5131;margin:25px 0}.site-footer{padding:80px 0 100px;border-top:1px solid var(--line);text-align:center}.site-footer h2{margin:0 auto 20px}.site-footer p{margin:0 auto;color:var(--muted)}.footer-links{margin-top:28px;display:flex;justify-content:center;gap:24px;color:var(--muted);font-size:14px}
+@media(max-width:760px){body{padding-top:68px}.wrap{width:min(1160px,calc(100% - 36px))}.case-nav{display:flex;gap:14px;flex-wrap:wrap;justify-content:flex-end}.hero{padding:75px 0 62px}.meta{grid-template-columns:1fr 1fr}.meta div:nth-child(2){border-right:0}.meta div:nth-child(3),.meta div:nth-child(4){border-top:1px solid var(--line)}.data-row{grid-template-columns:1fr}.data-row.head{display:none}.data-row>div{border-right:0;border-bottom:0}.data-row>div:last-child{border-bottom:0}.legend,.metrics{grid-template-columns:1fr 1fr}section{padding:70px 0}}
+@media(max-width:480px){.meta,.legend,.metrics{grid-template-columns:1fr}.meta div{border-right:0!important;border-top:1px solid var(--line)}.meta div:first-child{border-top:0}.hero h1{font-size:54px}.hero-lead{font-size:22px}section{padding:60px 0}}
+
+/* Exact shared portfolio header — matches the home page */
+.header{
+  height:86px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  position:fixed;
+  top:0;
+  left:50%;
+  transform:translateX(-50%);
+  z-index:1000;
+  background:var(--bg);
+  width:min(calc(100% - 72px),1160px);
+  box-sizing:border-box;
+}
+.header .logo{
+  font-size:36px;
+  line-height:1;
+  font-weight:700;
+  letter-spacing:-3px;
+  color:#111214;
+  flex:0 0 auto;
+}
+.header .nav{
+  display:flex;
+  gap:28px;
+  align-items:center;
+  margin-left:auto;
+  font-size:13px;
+  color:#626469;
+}
+.header .nav a{position:relative;color:inherit;text-decoration:none}
+.header .nav a:after{
+  content:"";position:absolute;left:0;right:0;bottom:-7px;height:1px;
+  background:#222;transform:scaleX(0);transform-origin:right;transition:transform .3s ease;
+}
+.header .nav a:hover:after{transform:scaleX(1);transform-origin:left}
+.header .nav .cv-button{
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:8px 13px;border:1px solid #bfc1c5;border-radius:999px;
+  color:#55575c;background:rgba(255,255,255,.3);font-size:11px;
+}
+.header .nav .cv-button:after{display:none}
+.menu-toggle{
+  display:none;width:40px;height:40px;padding:9px;border:1px solid #c5c7ca;
+  border-radius:10px;background:rgba(255,255,255,.35);cursor:pointer;
+  align-items:center;justify-content:center;flex-direction:column;gap:4px;color:#111214;
+}
+.menu-toggle span{display:block;width:18px;height:1.5px;background:currentColor;transition:transform .2s ease,opacity .2s ease}
+.menu-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(5.5px) rotate(45deg)}
+.menu-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+.menu-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-5.5px) rotate(-45deg)}
+@media(max-width:760px){
+  body{padding-top:70px!important}
+  .header{
+    height:70px;width:calc(100% - 36px);left:50%;right:auto;transform:translateX(-50%);
+  }
+  .header .nav{display:none}
+  .menu-toggle{display:flex}
+  .header .nav.menu-open{
+    display:flex;position:absolute;top:70px;left:0;right:0;width:auto;
+    margin:0;flex-direction:column;align-items:stretch;gap:0;padding:10px;
+    background:#f1f2f4;border:1px solid #cfd1d4;border-radius:14px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08)
+  }
+  .header .nav.menu-open a{
+    display:block!important;padding:12px 13px;font-size:13px;border-radius:9px
+  }
+  .header .nav.menu-open a:after{display:none}
+}
+</style>
+
+<style>
+/* Temporary launch lock for the Edu Fintech case study */
+.efg-lock-screen{position:fixed;inset:0;z-index:9999;background:rgba(243,243,239,.98);display:flex;align-items:center;justify-content:center;padding:24px;backdrop-filter:blur(10px);}
+.efg-lock-card{width:min(460px,100%);background:#fff;border:1px solid #d9d9d2;border-radius:24px;padding:38px;box-shadow:0 18px 60px rgba(17,17,17,.08);}
+.efg-lock-kicker{font-size:11px;text-transform:uppercase;letter-spacing:.14em;color:#686864;margin-bottom:14px;}
+.efg-lock-card h2{font-size:clamp(34px,6vw,52px);margin:0 0 14px;line-height:.98;letter-spacing:-.06em;}
+.efg-lock-card p{font-size:15px;color:#686864;margin:0 0 22px;max-width:none;}
+.efg-lock-form{display:flex;gap:10px;}
+.efg-lock-form input{flex:1;min-width:0;border:1px solid #c9c9c3;border-radius:12px;padding:12px 14px;font:inherit;background:#fff;color:#111;}
+.efg-lock-form button{border:1px solid #111;background:#111;color:#fff;border-radius:12px;padding:12px 17px;font:inherit;font-weight:600;cursor:pointer;}
+.efg-lock-form button:hover{opacity:.88;}
+.efg-lock-error{font-size:12px!important;color:#8a2f2f!important;margin:12px 0 0!important;min-height:18px;}
+.efg-locked .site-header,.efg-locked .case-backbar{visibility:hidden;}
+@media(max-width:560px){.efg-lock-card{padding:28px}.efg-lock-form{flex-direction:column}.efg-lock-form button{width:100%}}
+</style>
+</head>
+<body class="efg-locked">
+<div class="efg-lock-screen" id="efgLock" role="dialog" aria-modal="true" aria-labelledby="efgLockTitle">
+  <div class="efg-lock-card">
+    <div class="efg-lock-kicker">Private case study</div>
+    <h2 id="efgLockTitle">Edu Fintech</h2>
+    <p>This case study is temporarily password protected while I finish the final details.</p>
+    <form class="efg-lock-form" id="efgLockForm">
+      <input id="efgPassword" type="password" autocomplete="current-password" placeholder="Enter password" aria-label="Password" required>
+      <button type="submit">Unlock</button>
+    </form>
+    <p class="efg-lock-error" id="efgLockError" aria-live="polite"></p>
+  </div>
+</div>
+
+<header class="header wrap">
+  <a class="logo" href="index.html">CH.</a>
+  <nav class="nav">
+    <a href="case-studies.html">Case Studies</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a class="cv-button" href="Chetan-Hegde-Lead-Product-Designer.pdf" target="_blank" rel="noopener noreferrer">My CV</a>
+  </nav>
+  <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</header><div class="case-backbar wrap"><a class="back" href="case-studies.html">← Back to Case Studies</a></div>
+<main>
+<section class="hero"><div class="wrap"><div class="eyebrow">Edu Fintech — Product Design Case Study</div><h1>One platform.<br>Four very different jobs.</h1><p class="hero-lead">I led product design for an education-financing platform that serves parents, schools, investors and operations from one shared data layer, with a role-specific experience for each.</p><p class="byline">Oct 2, 2026 · @Chetan</p><div class="meta"><div><span>Role</span><b>Lead Product Designer</b></div><div><span>Team</span><b>Me + 2 designers</b></div><div><span>Timeline</span><b>2 months</b></div><div><span>Platforms</span><b>Web dashboards + parent web &amp; mobile</b></div></div><div class="image"><img src="efg.png" alt="Edu Fintech product experience"></div></div></section>
+
+<section id="numbers"><div class="wrap"><div class="section-no">Evidence & project scope</div><h2>Ground the story in what was actually designed.</h2><p class="lead">The strongest evidence available for this project is the research depth, role coverage and product scope — so the case study uses those instead of invented post-launch outcomes.</p><div class="data-table"><div class="data-row head"><div>Evidence</div><div>Value</div><div>Why it matters</div></div><div class="data-row"><div><strong>User interviews</strong></div><div>24</div><div>Parent needs and financing anxiety informed the experience direction</div></div><div class="data-row"><div><strong>Stakeholder sessions</strong></div><div>12</div><div>Business, risk and operational constraints were mapped</div></div><div class="data-row"><div><strong>Platforms reviewed</strong></div><div>8</div><div>Existing financing and onboarding patterns were compared</div></div><div class="data-row"><div><strong>Service blueprint</strong></div><div>1</div><div>Mapped people, systems and handoffs across the financing journey</div></div></div></div></section>
+
+<section id="overview"><div class="wrap"><div class="section-no">Overview</div><h2>One platform, four very different jobs.</h2><p class="lead">I led product design for an education-financing platform that serves parents, schools, investors and operations from one shared data layer, with a role-specific experience for each.</p><h3>Snapshot</h3><div class="data-table"><div class="data-row head"><div>Role</div><div>Detail</div><div>Context</div></div><div class="data-row"><div><strong>Role</strong></div><div>Lead Product Designer</div><div></div></div><div class="data-row"><div><strong>Team</strong></div><div>Me + 2 designers</div><div>Product, engineering, risk and operations stakeholders</div></div><div class="data-row"><div><strong>Timeline</strong></div><div>2 months</div><div></div></div><div class="data-row"><div><strong>Platforms</strong></div><div>Web dashboards + parent web and mobile</div><div>School, investor and operations dashboards</div></div><div class="data-row"><div><strong>Users</strong></div><div>Parents, schools, investors, operations</div><div></div></div><div class="data-row"><div><strong>Domain</strong></div><div>Education financing</div><div>Admission → financing → documents → approval → disbursement → repayment → tracking</div></div></div><h3>Business context</h3><p>The platform funds school fees: investors supply capital, schools enroll students into financing schemes (e.g. Month Over Month, Golden), parents repay in instalments, and operations keep the system safe. The platform only works if all four sides trust it.</p><p>The business case: smoother onboarding means more families financed; clearer repayment means fewer missed payments; faster school operations mean schools keep offering the scheme; transparent reporting keeps capital flowing.</p><h3>The problem</h3><p>The problem wasn't the loan — it was uncertainty. Across seven steps, each person asked different questions:</p><ul class="list"><li><b>Parents</b>How much do I pay? What happens next? Am I approved? When does money move?</li><li><b>Schools</b>Which students are financed? What's been paid? What needs attention?</li><li><b>Investors</b>Where is my capital? What are the returns?</li><li><b>Operations</b>Is everything working as it should?</li></ul><p>Early dashboards mirrored the database, so every user had to dig through fields to find their answer.</p><div class="principle"><div class="quote">How might we make a complex financing journey easy to understand for four users with four different jobs — on one platform?</div></div></div></section>
+
+<section id="goals"><div class="wrap"><div class="section-no">Product goals</div><h2>Measure the experience, not just the interface.</h2><div class="data-table"><div class="data-row head"><div>Goal</div><div>Primary metric</div><div>Success signal</div></div><div class="data-row"><div><strong>More families complete financing</strong></div><div>Application completion rate</div><div>Higher completion with lower step drop-off</div></div><div class="data-row"><div><strong>Faster approval</strong></div><div>Time from application to approval</div><div>Shorter median approval time</div></div><div class="data-row"><div><strong>Fewer document failures</strong></div><div>First-time document verification pass rate</div><div>Higher first-pass success</div></div><div class="data-row"><div><strong>On-time repayment</strong></div><div>On-time payment rate</div><div>Higher repayment reliability</div></div><div class="data-row"><div><strong>Less support load</strong></div><div>Parent support queries per active loan</div><div>Fewer avoidable status and payment questions</div></div><div class="data-row"><div><strong>Faster school operations</strong></div><div>Time to resolve a payment exception</div><div>Shorter exception-resolution time</div></div><div class="data-row"><div><strong>Investor confidence</strong></div><div>Manual report requests</div><div>More self-serve access to portfolio information</div></div></div><p class="lead" style="margin-top:30px"><strong>North-star metric:</strong> on-time repayment rate — a useful outcome measure connecting parent confidence, school trust and investor returns.</p></div></section>
+
+<section id="discovery"><div class="wrap"><div class="section-no">Discovery</div><h2>Complexity couldn't be removed. It had to be put in the right place.</h2><div class="data-table"><div class="data-row head"><div>Method</div><div>Volume</div><div>What it gave us</div></div><div class="data-row"><div><strong>User interviews</strong></div><div>24</div><div>How parents think about education financing, and where anxiety peaks</div></div><div class="data-row"><div><strong>Stakeholder sessions</strong></div><div>12</div><div>Business, risk and operational constraints</div></div><div class="data-row"><div><strong>Competitive review</strong></div><div>8 platforms</div><div>Proven patterns for financing, onboarding and repayment</div></div><div class="data-row"><div><strong>Service blueprint</strong></div><div>1</div><div>Where people, systems and handoffs meet across the seven steps</div></div></div><h3>Findings</h3><ol class="numbered"><li><div><strong>Parents needed reassurance.</strong> Anxiety peaked around approval, disbursement and the next payment date.</div></li><li><div><strong>Schools needed speed.</strong> Admins act on many students at once; they need status and exceptions, not detail.</div></li><li><div><strong>Complexity wasn't going away.</strong> Loan structures, schedules and risk rules are real; the product must carry them, not the user.</div></li></ol></div></section>
+
+<section id="insight"><div class="wrap"><div class="section-no">Key insight</div><h2>Design around decisions, not database fields.</h2><p class="lead">We rebuilt the parent dashboard as answers to the questions parents actually ask.</p><div class="data-table"><div class="data-row head"><div>The parent asks</div><div>The product answers with</div><div>Why it matters</div></div><div class="data-row"><div><strong>How much did I borrow?</strong></div><div>Loan summary</div><div>Immediate financial context</div></div><div class="data-row"><div><strong>How much have I paid?</strong></div><div>Repayment progress</div><div>Visible progress</div></div><div class="data-row"><div><strong>What remains?</strong></div><div>Outstanding balance</div><div>Clear next obligation</div></div><div class="data-row"><div><strong>When is my next payment?</strong></div><div>Upcoming payment</div><div>Reduces uncertainty</div></div><div class="data-row"><div><strong>What happened recently?</strong></div><div>Transaction history</div><div>Builds confidence and traceability</div></div></div><p style="margin-top:30px">The same rule set every role's information hierarchy: the first thing on screen answers that role's first question.</p></div></section>
+
+<section id="strategy"><div class="wrap"><div class="section-no">Product strategy</div><h2>Three decisions guided every screen.</h2><div class="stack"><div class="card"><h3>01 — Hide complexity, not information.</h3><p>The product manages loan structures, schedules and disbursement workflows; the detail stays one tap away.</p></div><div class="card"><h3>02 — Start with the user's question.</h3><p>Every screen begins from “what does this person need to know or do?”, not “what data do we have?”.</p></div><div class="card"><h3>03 — Don't force everyone into one dashboard.</h3><p>Shared data, role-specific hierarchy.</p></div></div><h3>Product trade-offs I made</h3><div class="data-table"><div class="data-row head"><div>Decision</div><div>Chose</div><div>Over / Why</div></div><div class="data-row"><div><strong>Dashboards</strong></div><div>Four role-specific views on shared data</div><div>Over one configurable dashboard. Each role's first question leads; less training and support.</div></div><div class="data-row"><div><strong>Parent home</strong></div><div>Status and next action first</div><div>Over full loan detail first. Reduces anxiety; detail stays reachable.</div></div><div class="data-row"><div><strong>School view</strong></div><div>Dense, filterable lists with exceptions surfaced</div><div>Over card-based summaries. Admins handle many students; speed beats visual lightness.</div></div><div class="data-row"><div><strong>Consistency</strong></div><div>Shared patterns and components across all four</div><div>Over independently designed views. Feels like one product; faster for two designers to build.</div></div></div></div></section>
+
+<section id="roles"><div class="wrap"><div class="section-no">Four role-based experiences</div><h2>Shared data. Different first questions.</h2><div class="data-table"><div class="data-row head"><div>Role</div><div>First question</div><div>What leads the screen</div></div><div class="data-row"><div><strong>Parent</strong></div><div>Where do I stand?</div><div>Tenure message, scheme and loan number, repayment schedule.</div></div><div class="data-row"><div><strong>School</strong></div><div>What needs my attention?</div><div>Students enrolled, total payables and receivables.</div></div><div class="data-row"><div><strong>Investor</strong></div><div>Where is my capital?</div><div>Funds invested, tenure, returns %, returns settled.</div></div><div class="data-row"><div><strong>Operations</strong></div><div>Is everything working?</div><div>Platform health.</div></div></div><h3>Key features by role</h3><div class="stack"><div class="card"><h3>Parent</h3><p>Repayment timeline with paid/upcoming states, loan summary, transaction history, View Loan Agreement, one-tap actions; web + mobile.</p></div><div class="card"><h3>School</h3><p>Loan disbursement status (Paid / Processing / Failed), student and fee management, raise request, filters by class and section.</p></div><div class="card"><h3>Investor</h3><p>Investment/repayment schedule by year, fund allocation by scheme, transaction history, downloadable reports.</p></div><div class="card"><h3>Operations</h3><p>Monitor users, transactions and exceptions.</p></div></div><p>The parent experience runs on web and mobile with the same hierarchy, so a parent never relearns the product between devices.</p></div></section>
+
+<section id="edge"><div class="wrap"><div class="section-no">Edge cases and risk</div><h2>Failure states carry the most anxiety and the most cost.</h2><p class="lead">In financing, failure states are first-class flows.</p><p><strong>Happy path:</strong> Uploading → Processing → Verification → Approved.</p><div class="data-table"><div class="data-row head"><div>Failure</div><div>Product response</div><div>Business risk reduced</div></div><div class="data-row"><div><strong>Blurry document</strong></div><div>Explain the problem, show an example, re-upload in place</div><div>Drop-off at documents</div></div><div class="data-row"><div><strong>Verification mismatch</strong></div><div>Show which field failed and how to fix it</div><div>Manual ops review load</div></div><div class="data-row"><div><strong>API timeout</strong></div><div>Auto-retry and save progress; tell the user</div><div>Duplicate submissions</div></div><div class="data-row"><div><strong>Network failure</strong></div><div>Keep entered data; resume where they left off</div><div>Abandoned applications</div></div><div class="data-row"><div><strong>Failed underwriting</strong></div><div>Clear reason and next steps, not a dead end</div><div>Support escalations, trust</div></div><div class="data-row"><div><strong>Failed payment</strong></div><div>Status visible to parent and school; retry option</div><div>Missed repayments</div></div></div><div class="principle"><div class="quote">Every failure answers three questions: What happened? What can I do now? Is my progress saved?</div></div></div></section>
+
+<section id="leadership"><div class="wrap"><div class="section-no">How I led</div><h2>What I led as a Lead Product Designer.</h2><div class="stack"><div class="card"><h3>Experience direction</h3><p>Defined the overall structure and key journeys across four roles.</p></div><div class="card"><h3>Product strategy</h3><p>Set the “decisions, not database fields” principle and the role-based hierarchy.</p></div><div class="card"><h3>Design system</h3><p>Established shared patterns and components so four experiences felt like one product.</p></div><div class="card"><h3>Team</h3><p>Directed and reviewed the work of two designers to keep quality and consistency.</p></div><div class="card"><h3>Stakeholders</h3><p>Aligned business, risk and operations needs across 12 sessions.</p></div></div></div></section>
+
+<section class="impact-section" id="impact"><div class="wrap"><div class="section-no">Impact</div><h2>Impact through research, scope and product clarity.</h2><p class="lead">The project did not provide verified post-launch analytics, so the impact section focuses on evidence we can stand behind and the measures established for future validation.</p><div class="metrics"><div class="metric"><div class="num">4 roles</div><div class="label">Role-based experiences</div><div class="sub">Confirmed scope</div></div><div class="metric"><div class="num">2 months</div><div class="label">Design delivery</div><div class="sub">Confirmed timeline</div></div><div class="metric"><div class="num">24</div><div class="label">User interviews</div><div class="sub">Confirmed research</div></div><div class="metric"><div class="num">12</div><div class="label">Stakeholder sessions</div><div class="sub">Confirmed research</div></div><div class="metric"><div class="num">8</div><div class="label">Platforms reviewed</div><div class="sub">Confirmed research</div></div><div class="metric"><div class="num">7 steps</div><div class="label">Financing journey</div><div class="sub">Admission → tracking</div></div></div><div class="data-table"><div class="data-row head"><div>Area</div><div>Result</div><div>Type</div></div><div class="data-row"><div><strong>Scope</strong></div><div>4 role-based experiences on 1 shared platform</div><div>Confirmed</div></div><div class="data-row"><div><strong>Delivery</strong></div><div>Designed in 2 months with a team of 3 designers</div><div>Confirmed</div></div><div class="data-row"><div><strong>Research</strong></div><div>24 interviews, 12 stakeholder sessions, 8 platforms reviewed and 1 service blueprint</div><div>Confirmed</div></div><div class="data-row"><div><strong>Journey</strong></div><div>7-stage financing journey from admission through tracking</div><div>Confirmed</div></div><div class="data-row"><div><strong>Experience strategy</strong></div><div>Four information hierarchies tailored to parent, school, investor and operations needs</div><div>Confirmed</div></div><div class="data-row"><div><strong>Design system</strong></div><div>Shared patterns and token-based foundations across the product</div><div>Confirmed</div></div></div><div class="note">Success measures established for future validation include application completion, approval time, first-pass document verification, on-time repayment, support-query volume and school exception-resolution time.</div></div></section>
+
+<section id="reflection"><div class="wrap"><div class="section-no">Reflection</div><h2>What worked. What I'd do next.</h2><p><strong>What worked:</strong> designing each role around its first question turned one complex system into four simple experiences.</p><h3>What I'd do next</h3><ul class="list"><li><b>Test the language</b>Are repayment, APR and fees understood at first read?</li><li><b>Test failure recovery</b>Can parents recover confidently when a document, payment or verification fails?</li><li><b>Test accessibility under stress</b>Can people act clearly when the financial stakes are high?</li><li><b>Instrument the funnel</b>Track drop-off at each of the seven steps to find where to invest next.</li></ul><div class="quote"><strong>Takeaway:</strong> my role as Lead Product Designer is to connect the problem, the experience and the team.</div></div></section>
+
+<section id="metrics-to-collect"><div class="wrap"><div class="section-no">Validation plan</div><h2>What I would measure after launch.</h2><p class="lead">These are the outcome measures I would instrument rather than presenting unverified results as facts.</p><ul class="list"><li>Application completion rate and drop-off by step</li><li>Median time from application to approval</li><li>First-time document verification pass rate</li><li>On-time repayment and delinquency rate</li><li>Parent support queries per active loan</li><li>Schools onboarded and students enrolled</li><li>Time to resolve payment exceptions</li><li>Self-serve vs manual investor reporting requests</li><li>Task success and time on task in usability testing</li></ul><div class="principle"><div class="quote">Measure the outcomes the product is designed to change — not just the screens delivered.</div></div></div></section>
+<section class="home-connect wrap reveal">
+  <div class="home-connect-inner">
+    <div class="home-connect-heading">
+      <div class="page-eyebrow">Connect</div>
+      <h2>Have a product problem<br>worth solving?</h2>
+      <a class="home-connect-email" href="mailto:chetan.dezign@gmail.com">chetan.dezign@gmail.com</a>
+    </div>
+    <div class="home-connect-actions">
+      <a class="home-connect-link" href="mailto:chetan.dezign@gmail.com">Let’s talk <span>→</span></a>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div>© 2026 Chetan Hegde</div>
+  <div class="site-footer-links">
+    <a href="index.html">Home</a>
+    <a href="case-studies.html">Case Studies</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <div class="site-footer-socials" aria-label="Social links">
+    <a class="footer-social-icon" href="https://www.linkedin.com/in/chetandesign/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 8.2H3.1V20h3.4V8.2ZM4.8 3A2 2 0 1 0 4.8 7a2 2 0 0 0 0-4ZM20.9 13.2c0-3.6-1.9-5.3-4.5-5.3-2.1 0-3 1.2-3.5 2v-1.7H9.5V20h3.4v-6.5c0-1.7.3-3.3 2.4-3.3 2 0 2 1.9 2 3.4V20h3.6v-6.8Z"/></svg>
+    </a>
+    <a class="footer-social-icon" href="#" aria-label="Instagram" title="Instagram">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="4"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.8" r="1"/></svg>
+    </a>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const hash='d0b756e7bb53e7a2835d2d68d5995aa060fcf0ba4dbcf77dbb3b77e03f0c1182';
+  const form=document.getElementById('efgLockForm');
+  const input=document.getElementById('efgPassword');
+  const error=document.getElementById('efgLockError');
+  const lock=document.getElementById('efgLock');
+  async function digest(value){
+    const bytes=new TextEncoder().encode(value);
+    const buffer=await crypto.subtle.digest('SHA-256',bytes);
+    return Array.from(new Uint8Array(buffer)).map(b=>b.toString(16).padStart(2,'0')).join('');
+  }
+  form.addEventListener('submit',async function(e){
+    e.preventDefault();
+    error.textContent='';
+    if((await digest(input.value))===hash){
+      document.body.classList.remove('efg-locked');
+      lock.remove();
+      sessionStorage.setItem('efgUnlocked','1');
+    }else{
+      error.textContent='That password doesn’t match. Please try again.';
+      input.select();
+    }
+  });
+  if(sessionStorage.getItem('efgUnlocked')==='1'){
+    document.body.classList.remove('efg-locked');
+    lock.remove();
+  }
+})();
+</script>
+
+<script>
+(function(){const b=document.querySelector('.menu-toggle');const n=document.querySelector('.nav, .case-nav');if(!b||!n)return;b.addEventListener('click',()=>{const open=b.getAttribute('aria-expanded')==='true';b.setAttribute('aria-expanded',String(!open));b.setAttribute('aria-label',open?'Open menu':'Close menu');n.classList.toggle('menu-open',!open)});n.addEventListener('click',e=>{if(e.target.closest('a')){b.setAttribute('aria-expanded','false');b.setAttribute('aria-label','Open menu');n.classList.remove('menu-open')}})})();
+</script>
+</body></html>

@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Contact Chetan Hegde.">
+<title>Contact — Chetan Hegde</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="header wrap">
+  <a class="logo" href="index.html">CH.</a>
+  <nav class="nav">
+    <a href="case-studies.html">Case Studies</a>
+    <a href="about.html">About</a>
+    <a class="active" href="contact.html">Contact</a>
+    <a class="cv-button" href="Chetan-Hegde-Lead-Product-Designer.pdf" target="_blank" rel="noopener noreferrer">My CV</a>
+  </nav>
+  <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</header>
+
+<main>
+<section class="contact-hero wrap reveal">
+  <div class="page-eyebrow">Contact</div>
+  <h1>The next great product<br>starts with a conversation.</h1>
+  <p>Let's build something meaningful.</p>
+</section>
+
+<section class="about-block wrap reveal contact-section">
+  <div class="contact-cards">
+
+    <article class="contact-card">
+      <div>
+        <div class="contact-card-label">Email</div>
+        <a class="contact-card-value" href="mailto:chetan.dezign@gmail.com">chetan.dezign@gmail.com</a>
+      </div>
+      <div class="contact-card-action">
+        <a href="mailto:chetan.dezign@gmail.com">Send email →</a>
+        <button class="copy-button" data-copy="chetan.dezign@gmail.com" aria-label="Copy email" title="Copy email"><span class="copy-icon" aria-hidden="true">⧉</span><span>Copy</span></button>
+      </div>
+    </article>
+
+    <article class="contact-card">
+      <div>
+        <div class="contact-card-label">Call</div>
+        <a class="contact-card-value" href="tel:+919916068691">+91 99160 68691</a>
+      </div>
+      <div class="contact-card-action">
+        <a href="tel:+919916068691">Call me →</a>
+        <button class="copy-button" data-copy="+91 99160 68691" aria-label="Copy phone number" title="Copy phone number"><span class="copy-icon" aria-hidden="true">⧉</span><span>Copy</span></button>
+      </div>
+    </article>
+
+    <article class="contact-card">
+      <div>
+        <div class="contact-card-label">LinkedIn</div>
+        <a class="contact-card-value" href="https://www.linkedin.com/in/chetandesign/" target="_blank" rel="noopener">/in/chetandesign</a>
+      </div>
+      <div class="contact-card-action">
+        <a href="https://www.linkedin.com/in/chetandesign/" target="_blank" rel="noopener">View profile →</a>
+        <span class="contact-action-icon" aria-hidden="true">↗</span>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+
+
+</main>
+
+<footer class="site-footer">
+  <div>© 2026 Chetan Hegde</div>
+  <div class="site-footer-links">
+    <a href="index.html">Home</a>
+    <a href="case-studies.html">Case Studies</a>
+    <a href="about.html">About</a>
+    <a class="active" href="contact.html">Contact</a>
+  </div>
+  <div class="site-footer-socials" aria-label="Social links">
+    <a class="footer-social-icon" href="https://www.linkedin.com/in/chetandesign/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 8.2H3.1V20h3.4V8.2ZM4.8 3A2 2 0 1 0 4.8 7a2 2 0 0 0 0-4ZM20.9 13.2c0-3.6-1.9-5.3-4.5-5.3-2.1 0-3 1.2-3.5 2v-1.7H9.5V20h3.4v-6.5c0-1.7.3-3.3 2.4-3.3 2 0 2 1.9 2 3.4V20h3.6v-6.8Z"/></svg>
+    </a>
+    <a class="footer-social-icon" href="#" aria-label="Instagram" title="Instagram">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="4"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.8" r="1"/></svg>
+    </a>
+  </div>
+</footer>
+
+<script>
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add("visible");
+      observer.unobserve(entry.target);
+    }
+  });
+},{threshold:.08});
+document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
+
+document.querySelectorAll(".copy-button").forEach(button=>{
+  button.addEventListener("click", async ()=>{
+    try{
+      await navigator.clipboard.writeText(button.dataset.copy);
+      const original=button.textContent;
+      button.textContent="Copied";
+      setTimeout(()=>button.textContent=original,1200);
+    }catch(e){}
+  });
+});
+</script>
+
+<script>
+(function(){const b=document.querySelector('.menu-toggle');const n=document.querySelector('.nav, .case-nav');if(!b||!n)return;b.addEventListener('click',()=>{const open=b.getAttribute('aria-expanded')==='true';b.setAttribute('aria-expanded',String(!open));b.setAttribute('aria-label',open?'Open menu':'Close menu');n.classList.toggle('menu-open',!open)});n.addEventListener('click',e=>{if(e.target.closest('a')){b.setAttribute('aria-expanded','false');b.setAttribute('aria-label','Open menu');n.classList.remove('menu-open')}})})();
+</script>
+</body>
+</html>

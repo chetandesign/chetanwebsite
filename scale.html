@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Scale — Lead Product Designer case study by Chetan Hegde.">
+<title>Scale — Lead Product Designer Case Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f3f3ef;--paper:#fff;--ink:#111;--muted:#686864;--line:#d9d9d2;--soft:#e9e9e3;--accent:#111;--max:1120px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;overflow-y:scroll;scrollbar-gutter:stable}body{margin:0;padding-top:86px;background:var(--bg);color:var(--ink);font-family:"DM Sans",Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}.wrap{width:min(var(--max),calc(100% - 48px));margin:0 auto}
+.site-header{position:fixed;top:0;left:50%;transform:translateX(-50%);z-index:1000;height:86px;display:flex;align-items:center;justify-content:space-between;border-bottom:0;background:var(--bg)}.logo{font-size:36px;font-weight:700;letter-spacing:-3px}.header-right{display:flex;align-items:center;gap:22px;font-size:14px}.back{color:var(--muted)}.back:hover{color:var(--ink)}.case-nav{display:flex;gap:20px;color:var(--muted)}.case-nav a.active{color:var(--ink);font-weight:650}.case-backbar{padding:14px 0 0}.case-backbar .back{font-size:13px;color:var(--muted)}.case-backbar .back:hover{color:var(--ink)}
+.hero{padding:105px 0 82px}.eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.14em;color:var(--muted);margin-bottom:22px}.hero h1{font-size:clamp(52px,8vw,100px);line-height:.92;letter-spacing:-.075em;font-weight:650;margin:0 0 30px;max-width:1000px}.hero-lead{font-size:clamp(23px,2.5vw,32px);line-height:1.25;letter-spacing:-.03em;max-width:900px;margin:0 0 20px}.byline{font-size:13px;color:var(--muted);margin:0 0 28px}.meta{margin-top:52px;border-top:1px solid var(--line);border-bottom:0;display:grid;grid-template-columns:repeat(4,1fr)}.meta div{padding:21px 18px;border-right:1px solid var(--line)}.meta div:last-child{border-right:0}.meta span{display:block;color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:.1em;margin-bottom:7px}.meta b{font-size:14px;font-weight:600}
+section{padding:100px 0;border-top:1px solid var(--line)}section:first-child{border-top:0}.section-no{font-size:11px;text-transform:uppercase;letter-spacing:.13em;color:var(--muted);margin-bottom:18px}h2{font-size:clamp(40px,5.5vw,68px);line-height:.98;letter-spacing:-.06em;font-weight:620;margin:0 0 30px;max-width:920px}h3{font-size:21px;letter-spacing:-.025em;margin:46px 0 12px}p{font-size:17px;max-width:860px;margin:0 0 18px}.lead{font-size:21px;line-height:1.4;max-width:860px}.muted{color:var(--muted)}.quote{font-size:clamp(29px,4vw,50px);line-height:1.08;letter-spacing:-.05em;margin:45px 0;max-width:930px}
+.image{width:100%;margin:48px 0 10px;border:1px solid var(--line);border-radius:24px;overflow:hidden;background:#e9e9e4}.image img{display:block;width:100%;height:auto;max-height:850px;object-fit:contain}.caption{font-size:12px;color:var(--muted);margin-bottom:38px}.stack{display:grid;gap:12px;margin-top:30px}.card{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:27px}.card h3{margin:0 0 9px;font-size:18px}.card p{font-size:15px;margin:0;color:#555}
+.data-table{margin-top:30px;border-top:1px solid var(--line);background:var(--paper);border-radius:20px;overflow:hidden;border-left:1px solid var(--line);border-right:1px solid var(--line)}.data-row{display:grid;grid-template-columns:1.05fr .95fr 1.5fr;gap:0;border-bottom:0}.data-row>div{padding:18px 20px;border-right:1px solid var(--line);font-size:15px}.data-row>div:last-child{border-right:0}.data-row.head{background:var(--soft);font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}.data-row.head>div{font-size:11px}.data-row strong{font-weight:600}.data-row em{font-style:normal;color:#666}
+.legend{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:30px}.legend .card{min-height:150px}.marker{display:inline-block;font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:10px}.star{font-weight:700}.directional{font-style:italic}
+.list{margin:28px 0 0;padding:0;list-style:none}.list li{padding:19px 0;border-top:1px solid var(--line);font-size:16px}.list li b{display:block;margin-bottom:5px}.numbered{counter-reset:item;list-style:none;padding:0;margin:28px 0}.numbered li{counter-increment:item;display:grid;grid-template-columns:38px 1fr;gap:15px;padding:18px 0;border-top:1px solid var(--line);font-size:16px}.numbered li:before{content:counter(item);width:30px;height:30px;border-radius:50%;background:#111;color:#fff;display:grid;place-items:center;font-size:11px}
+.flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:30px 0}.flow span{background:#111;color:#fff;border-radius:999px;padding:10px 14px;font-size:12px}.flow i{font-style:normal;color:#999}.principle{background:#111;color:#fff;border-radius:26px;padding:45px;margin-top:36px}.principle p{color:#cfcfcb}.principle .quote{margin:0;color:#fff}.before-after{margin-top:34px;border-top:1px solid var(--line)}.ba{display:grid;grid-template-columns:1fr 1.35fr;border-bottom:0}.ba div{padding:20px}.ba .old{background:#ecece6;color:#62625e;border-right:1px solid var(--line)}.ba b{font-size:11px;text-transform:uppercase;letter-spacing:.1em}.ba p{font-size:16px;margin:8px 0 0}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:32px}.metric{background:#111;color:#fff;border-radius:18px;padding:26px;min-height:170px}.metric .num{font-size:32px;letter-spacing:-.05em;font-weight:650}.metric .label{font-size:14px;color:#d2d2d2;margin-top:8px}.metric .sub{font-size:11px;color:#999;margin-top:12px}.impact-section h2{max-width:760px}.note{background:#fff7df;border:1px solid #eadfbf;border-radius:16px;padding:17px 19px;font-size:13px;color:#5d5131;margin:25px 0}.ai{padding:23px 0;border-top:1px solid var(--line);display:grid;grid-template-columns:42px 1fr;gap:18px}.ai .n{width:34px;height:34px;border-radius:50%;background:#111;color:#fff;display:grid;place-items:center;font-size:11px}.ai h3{margin:0 0 6px;font-size:18px}.ai p{font-size:15px;margin:0;color:#555}.site-footer{padding:80px 0 100px;border-top:1px solid var(--line);text-align:center}.site-footer h2{margin:0 auto 20px}.site-footer p{margin:0 auto;color:var(--muted)}.footer-links{margin-top:28px;display:flex;justify-content:center;gap:24px;color:var(--muted);font-size:14px}
+@media(max-width:760px){body{padding-top:68px}.wrap{width:min(1160px,calc(100% - 36px))}.case-nav{display:flex;gap:14px;flex-wrap:wrap;justify-content:flex-end}.hero{padding:75px 0 62px}.meta{grid-template-columns:1fr 1fr}.meta div:nth-child(2){border-right:0}.meta div:nth-child(3),.meta div:nth-child(4){border-top:1px solid var(--line)}.data-row{grid-template-columns:1fr}.data-row.head{display:none}.data-row>div{border-right:0;border-bottom:0}.data-row>div:last-child{border-bottom:0}.legend,.metrics{grid-template-columns:1fr 1fr}.ba{grid-template-columns:1fr}.ba .old{border-right:0;border-bottom:0}section{padding:70px 0}}
+@media(max-width:480px){.meta,.legend,.metrics{grid-template-columns:1fr}.meta div{border-right:0!important;border-top:1px solid var(--line)}.meta div:first-child{border-top:0}.hero h1{font-size:54px}.hero-lead{font-size:22px}section{padding:60px 0}}
+
+/* Exact shared portfolio header — matches the home page */
+.header{
+  height:86px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  position:fixed;
+  top:0;
+  left:50%;
+  transform:translateX(-50%);
+  z-index:1000;
+  background:var(--bg);
+  width:min(calc(100% - 72px),1160px);
+  box-sizing:border-box;
+}
+.header .logo{
+  font-size:36px;
+  line-height:1;
+  font-weight:700;
+  letter-spacing:-3px;
+  color:#111214;
+  flex:0 0 auto;
+}
+.header .nav{
+  display:flex;
+  gap:28px;
+  align-items:center;
+  margin-left:auto;
+  font-size:13px;
+  color:#626469;
+}
+.header .nav a{position:relative;color:inherit;text-decoration:none}
+.header .nav a:after{
+  content:"";position:absolute;left:0;right:0;bottom:-7px;height:1px;
+  background:#222;transform:scaleX(0);transform-origin:right;transition:transform .3s ease;
+}
+.header .nav a:hover:after{transform:scaleX(1);transform-origin:left}
+.header .nav .cv-button{
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:8px 13px;border:1px solid #bfc1c5;border-radius:999px;
+  color:#55575c;background:rgba(255,255,255,.3);font-size:11px;
+}
+.header .nav .cv-button:after{display:none}
+.menu-toggle{
+  display:none;width:40px;height:40px;padding:9px;border:1px solid #c5c7ca;
+  border-radius:10px;background:rgba(255,255,255,.35);cursor:pointer;
+  align-items:center;justify-content:center;flex-direction:column;gap:4px;color:#111214;
+}
+.menu-toggle span{display:block;width:18px;height:1.5px;background:currentColor;transition:transform .2s ease,opacity .2s ease}
+.menu-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(5.5px) rotate(45deg)}
+.menu-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+.menu-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-5.5px) rotate(-45deg)}
+@media(max-width:760px){
+  body{padding-top:70px!important}
+  .header{
+    height:70px;width:calc(100% - 36px);left:50%;right:auto;transform:translateX(-50%);
+  }
+  .header .nav{display:none}
+  .menu-toggle{display:flex}
+  .header .nav.menu-open{
+    display:flex;position:absolute;top:70px;left:0;right:0;width:auto;
+    margin:0;flex-direction:column;align-items:stretch;gap:0;padding:10px;
+    background:#f1f2f4;border:1px solid #cfd1d4;border-radius:14px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08)
+  }
+  .header .nav.menu-open a{
+    display:block!important;padding:12px 13px;font-size:13px;border-radius:9px
+  }
+  .header .nav.menu-open a:after{display:none}
+}
+</style>
+
+</head>
+<body>
+<header class="header wrap">
+  <a class="logo" href="index.html">CH.</a>
+  <nav class="nav">
+    <a href="case-studies.html">Case Studies</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a class="cv-button" href="Chetan-Hegde-Lead-Product-Designer.pdf" target="_blank" rel="noopener noreferrer">My CV</a>
+  </nav>
+  <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</header><div class="case-backbar wrap"><a class="back" href="case-studies.html">← Back to Case Studies</a></div>
+<main>
+<section class="hero"><div class="wrap">
+  <div class="eyebrow">Lead Product Designer Case Study</div>
+  <h1>Designing a smarter<br>way to buy and sell businesses.</h1>
+  <p class="hero-lead">Scale is a digital business marketplace designed for the New Zealand market, connecting buyers and sellers while reducing the friction and dependency traditionally associated with intermediaries.</p>
+  <p class="byline">Lead Product Designer · 4 months · Web Application · 3 Designers</p>
+  <div class="meta">
+    <div><span>My role</span><b>Lead Product Designer</b></div>
+    <div><span>Timeline</span><b>4 months</b></div>
+    <div><span>Platform</span><b>Web Application</b></div>
+    <div><span>Team</span><b>3 Designers</b></div>
+  </div>
+  <div class="image"><img src="scale.png" alt="Scale product interface"></div>
+  <div class="caption">Scale product interface — selected project visual.</div>
+  <div class="principle"><p>Focus</p><div class="quote">Product Strategy · Marketplace · AI · Financial Intelligence</div></div>
+</div></section>
+
+<section id="opportunity"><div class="wrap">
+  <div class="section-no">01 — The Opportunity</div>
+  <h2>Moving from intermediary-led transactions to a digital marketplace.</h2>
+  <p class="lead">Buying or selling a business involves valuation, financial analysis, due diligence, negotiation and funding. The existing process relied heavily on intermediaries, adding cost and friction.</p>
+  <p>Scale's opportunity was to bring buyers and sellers together directly while providing the financial intelligence needed to make informed decisions.</p>
+  <p>The business model was built around a 1–2% transaction commission, with additional revenue opportunities through premium subscriptions and related services.</p>
+  <p>The goal wasn't to build another marketplace. It was to make business transactions more direct, transparent and data-driven.</p>
+</div></section>
+
+<section id="challenge"><div class="wrap">
+  <div class="section-no">02 — The Product Challenge</div>
+  <h2>A marketplace could connect people. It couldn't make the decision for them.</h2>
+  <p>Our research showed that the biggest opportunity wasn't simply helping users discover businesses. Buyers also needed confidence in what they were evaluating.</p>
+  <p>They needed to understand:</p>
+  <ul class="list">
+    <li><b>Is this business worth the asking price?</b></li>
+    <li><b>What is its financial potential?</b></li>
+    <li><b>What are the risks?</b></li>
+    <li><b>What could the ROI look like?</b></li>
+  </ul>
+  <div class="quote">How might we help buyers and sellers move from discovering a business to confidently evaluating and progressing a transaction?</div>
+  <p>Market research also highlighted significant friction around business-sale conversion and due diligence.</p>
+</div></section>
+
+<section id="transaction-platform"><div class="wrap">
+  <div class="section-no">03 — From Marketplace to Transaction Platform</div>
+  <h2>A simple progression became the product spine.</h2>
+  <p class="lead">I structured the product around a simple progression:</p>
+  <div class="flow"><span>Discover</span><i>→</i><span>Evaluate</span><i>→</i><span>Validate</span><i>→</i><span>Connect</span><i>→</i><span>Transact</span></div>
+  <div class="stack">
+    <div class="card"><h3>Discover</h3><p>Find relevant businesses.</p></div>
+    <div class="card"><h3>Evaluate</h3><p>Understand the business, financials and opportunity.</p></div>
+    <div class="card"><h3>Validate</h3><p>Use valuation, ROI and AI-powered analysis to assess the opportunity.</p></div>
+    <div class="card"><h3>Connect</h3><p>Request access and communicate with sellers.</p></div>
+    <div class="card"><h3>Transact</h3><p>Progress toward offers, funding and acquisition.</p></div>
+  </div>
+  <p style="margin-top:28px">This became the product spine that connected individual features into one experience.</p>
+</div></section>
+
+<section id="multi-sided"><div class="wrap">
+  <div class="section-no">04 — Designing for a Multi-sided Product</div>
+  <h2>Four roles. One shared marketplace.</h2>
+  <p class="lead">Scale served four distinct roles. Rather than designing one generic experience, we used role-based journeys to surface the information and actions relevant to each user.</p>
+  <div class="stack">
+    <div class="card"><h3>Buyers</h3><p>Discover businesses and evaluate investment opportunities.</p></div>
+    <div class="card"><h3>Sellers</h3><p>Create listings, present their business and manage buyer access.</p></div>
+    <div class="card"><h3>Funders</h3><p>Review financial assistance requests.</p></div>
+    <div class="card"><h3>Admins</h3><p>Monitor users, listings, premium activity, loans and commissions.</p></div>
+  </div>
+</div></section>
+
+<section id="intelligence"><div class="wrap">
+  <div class="section-no">05 — The Intelligence Layer</div>
+  <h2>Financial intelligence became part of the core product.</h2>
+  <p class="lead">One of our key product decisions was to make financial analysis part of the marketplace experience rather than treating it as a separate tool.</p>
+  <div class="stack">
+    <div class="card"><h3>Marketplace</h3><p>Business discovery and listings.</p></div>
+    <div class="card"><h3>Financial Intelligence</h3><p>Financial performance and valuation.</p></div>
+    <div class="card"><h3>AI</h3><p>Predictive and scenario analysis.</p></div>
+    <div class="card"><h3>Decision Support</h3><p>ROI and DCF calculations.</p></div>
+    <div class="card"><h3>Communication</h3><p>Controlled information sharing.</p></div>
+    <div class="card"><h3>Funding</h3><p>Financial assistance.</p></div>
+  </div>
+  <p style="margin-top:28px">The original product scope included AI-powered valuation, scenario analysis, ROI, predictive analysis and funding support.</p>
+</div></section>
+
+<section id="ai-confidence"><div class="wrap">
+  <div class="section-no">06 — Designing AI for Decision Confidence</div>
+  <h2>AI wasn't added as a feature. It solved a product problem.</h2>
+  <p class="lead">The key question was: Where can AI reduce uncertainty in a high-value financial decision?</p>
+  <p>We designed AI capabilities around:</p>
+  <ul class="list">
+    <li><b>Business valuation</b></li>
+    <li><b>Scenario analysis</b></li>
+    <li><b>Revenue and profitability prediction</b></li>
+    <li><b>Risk insights</b></li>
+    <li><b>ROI</b></li>
+    <li><b>Financial analysis</b></li>
+    <li><b>Generative business descriptions</b></li>
+  </ul>
+  <div class="flow"><span>Raw financial data</span><i>→</i><span>Analysis</span><i>→</i><span>Scenario</span><i>→</i><span>Insight</span><i>→</i><span>Decision</span></div>
+  <p>Financial data could be transformed into understandable insights to help buyers move from raw information to a clearer decision.</p>
+  <p>The product documentation also defined predictive insights around cash flow, ROI, DCF, revenue, expenses and profitability.</p>
+</div></section>
+
+<section id="experiences"><div class="wrap">
+  <div class="section-no">07 — Key Product Experiences</div>
+  <h2>Designing the moments that move a transaction forward.</h2>
+  <div class="stack">
+    <div class="card"><h3>Guided business listing</h3><p>Selling a business involves a large amount of information. We designed a guided listing experience that progressively collected business details, financial information and media rather than presenting sellers with an overwhelming form.</p></div>
+    <div class="card"><h3>Intelligent evaluation</h3><p>Buyers could use financial data, AI insights and ROI tools to understand the potential of a business.</p></div>
+    <div class="card"><h3>Controlled access</h3><p>Sellers could control when deeper business information became available, balancing transparency with confidentiality.</p></div>
+    <div class="card"><h3>Premium intelligence</h3><p>Advanced AI and financial capabilities were positioned within a premium subscription, connecting product value directly to monetisation.</p></div>
+  </div>
+</div></section>
+
+<section id="role"><div class="wrap">
+  <div class="section-no">08 — My Role</div>
+  <h2>Lead Product Designer.</h2>
+  <p class="lead">I owned the product experience end-to-end across a three-designer team.</p>
+  <div class="stack">
+    <div class="card"><h3>Discovery</h3><p>Stakeholder discovery · Customer insight synthesis · Domain exploration</p></div>
+    <div class="card"><h3>Strategy</h3><p>Competitive analysis · Product opportunities · Feature prioritisation</p></div>
+    <div class="card"><h3>UX</h3><p>Information architecture · Role-based journeys · User flows · Wireframes</p></div>
+    <div class="card"><h3>Product innovation</h3><p>AI feature definition · Financial workflows · Decision-support concepts</p></div>
+    <div class="card"><h3>Execution</h3><p>Visual design · Prototyping · Design reviews · Stakeholder presentations</p></div>
+  </div>
+</div></section>
+
+<section id="ai-process"><div class="wrap">
+  <div class="section-no">09 — AI in My Design Process</div>
+  <h2>AI as a design thinking partner.</h2>
+  <p class="lead">I also used AI as a design thinking partner, not as a replacement for product judgment.</p>
+  <p>Using ChatGPT, Claude and Gemini, I explored:</p>
+  <ul class="list">
+    <li><b>Research synthesis</b></li>
+    <li><b>Competitive analysis</b></li>
+    <li><b>Financial scenarios</b></li>
+    <li><b>UX opportunities</b></li>
+    <li><b>Content</b></li>
+    <li><b>Financial feature concepts</b></li>
+  </ul>
+  <p style="margin-top:28px">This helped accelerate exploration and challenge assumptions while product decisions remained grounded in business objectives and user needs.</p>
+</div></section>
+
+<section id="measurement" class="impact-section"><div class="wrap">
+  <div class="section-no">10 — Measuring Success</div>
+  <h2>Measure the transaction, not just the interface.</h2>
+  <p class="lead">Scale did not have mature production analytics available to us, so I would not present fabricated post-launch results. Instead, I established a framework for measuring the product.</p>
+  <div class="principle"><p>Proposed North Star</p><div class="quote">Qualified Transactions Initiated</div></div>
+  <h3>Supporting metrics</h3>
+  <div class="stack">
+    <div class="card"><h3>Marketplace</h3><p>Buyer registrations · Active listings · Buyer enquiries</p></div>
+    <div class="card"><h3>Activation</h3><p>Business viewed · Financial analysis completed · AI insight usage</p></div>
+    <div class="card"><h3>Monetisation</h3><p>Premium conversion · Subscription engagement</p></div>
+    <div class="card"><h3>Transaction</h3><p>Buyer–seller connections · Offers initiated · Completed transactions</p></div>
+  </div>
+  <div class="note">The original project identified at least 5% improvement in conversion as a target, rather than an achieved result.</div>
+</div></section>
+
+<section id="outcome"><div class="wrap">
+  <div class="section-no">Outcome</div>
+  <h2>From a marketplace to a transaction ecosystem.</h2>
+  <p class="lead">Scale brought together:</p>
+  <div class="flow"><span>Marketplace</span><i>+</i><span>Financial Intelligence</span><i>+</i><span>AI</span><i>+</i><span>Communication</span><i>+</i><span>Funding</span></div>
+  <p>The result was a product designed not only to help people find businesses, but to understand their value, evaluate the opportunity and progress toward a transaction.</p>
+  <p>The client response documented in the project materials was positive, particularly around the overall customer experience.</p>
+</div></section>
+
+<section class="home-connect wrap reveal">
+  <div class="home-connect-inner">
+    <div class="home-connect-heading">
+      <div class="page-eyebrow">Connect</div>
+      <h2>Have a product problem<br>worth solving?</h2>
+      <a class="home-connect-email" href="mailto:chetan.dezign@gmail.com">chetan.dezign@gmail.com</a>
+    </div>
+    <div class="home-connect-actions">
+      <a class="home-connect-link" href="mailto:chetan.dezign@gmail.com">Let’s talk <span>→</span></a>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div>© 2026 Chetan Hegde</div>
+  <div class="site-footer-links">
+    <a href="index.html">Home</a>
+    <a href="case-studies.html">Case Studies</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <div class="site-footer-socials" aria-label="Social links">
+    <a class="footer-social-icon" href="https://www.linkedin.com/in/chetandesign/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 8.2H3.1V20h3.4V8.2ZM4.8 3A2 2 0 1 0 4.8 7a2 2 0 0 0 0-4ZM20.9 13.2c0-3.6-1.9-5.3-4.5-5.3-2.1 0-3 1.2-3.5 2v-1.7H9.5V20h3.4v-6.5c0-1.7.3-3.3 2.4-3.3 2 0 2 1.9 2 3.4V20h3.6v-6.8Z"/></svg>
+    </a>
+    <a class="footer-social-icon" href="#" aria-label="Instagram" title="Instagram">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="4"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.8" r="1"/></svg>
+    </a>
+  </div>
+</footer>
+
+<script>
+(function(){const b=document.querySelector('.menu-toggle');const n=document.querySelector('.nav, .case-nav');if(!b||!n)return;b.addEventListener('click',()=>{const open=b.getAttribute('aria-expanded')==='true';b.setAttribute('aria-expanded',String(!open));b.setAttribute('aria-label',open?'Open menu':'Close menu');n.classList.toggle('menu-open',!open)});n.addEventListener('click',e=>{if(e.target.closest('a')){b.setAttribute('aria-expanded','false');b.setAttribute('aria-label','Open menu');n.classList.remove('menu-open')}})})();
+</script>
+</body>
+</html>
